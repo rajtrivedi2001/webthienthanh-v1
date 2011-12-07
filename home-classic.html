@@ -1,0 +1,768 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    
+    <meta http-equiv="Content-Language" content="en" />
+    <title>The Palace - Classic home</title>
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<link rel="stylesheet" type="text/css" href="./jquery.datepick.css" />
+	<link rel="stylesheet" type="text/css" href="./jquery.selectbox.css" />
+	<link rel="stylesheet" type="text/css" href="./colorpicker/css/colorpicker.css" />
+	<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="style-ie.css" />
+	<![endif]-->
+	<!--[if IE 7]> 
+	<link rel="stylesheet" type="text/css" href="style-ie7.css" />
+	<![endif]-->
+	<!--[if IE 8]> 
+	<link rel="stylesheet" type="text/css" href="style-ie8.css" />
+	<![endif]-->
+	<!--[if IE 9]> 
+	<link rel="stylesheet" type="text/css" href="style-ie9.css" />
+	<![endif]-->
+	<script src="./js/jquery-1.6.4.min.js" type="text/javascript"></script>
+	<script src="./js/jquery.easing.1.3.js" type="text/javascript"></script>
+	<script src="./js/sliders.js" type="text/javascript"></script>
+	<script src="./js/pcode.js" type="text/javascript"></script>
+	<script src="./js/superfish.js" type="text/javascript"></script>
+	<script src="./colorpicker/js/colorpicker.js" type="text/javascript"></script>
+	<script src="./js/miscellaneous.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		full_width_slider(true, true, 5000, 1000); //parameters: autoplay: boolean, fade out arrow when no move: boolean, pause time: integer milliseconds, transition speed: integer milliseconds
+		$('#nav ul').superfish();
+		packages_slider();
+		testimonials_slider(); 
+		jquery_miscellaneous();
+	});
+	</script>
+<meta charset="UTF-8"></head>
+
+<body>
+	
+	<!-- begin full-width-header -->
+	<div id="full-width-header">
+		
+		<!-- begin header -->
+		<div id="header">
+		
+			<!-- begin logo -->
+			<div id="logo">
+				<h1>
+					<a href="./index.html">
+						<!-- put your logo just below -->
+						<img src="./img-demo/logo.png" alt="" />
+					</a>
+				</h1>
+				<div id="logo-bottom">&nbsp;
+					<div id="logo-bottom-left"></div>
+					<div id="logo-bottom-right"></div>
+				</div>
+			</div>
+			<!-- end logo -->
+			
+			<!-- begin main navigation -->
+			<div id="nav">
+				
+				<div id="nav-left"></div>
+				<div id="nav-right"></div>
+				
+				<ul>
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./rooms.html">Rooms &amp; Suites&nbsp;&nbsp;<span class="nav-arrow-down">&#9660;</span></a>
+						<ul>
+							<li><a href="./room.html">Single room</a></li>
+							<li><a href="./room.html">Double room<span class="nav-arrow-right">&#9658;</span></a>
+								<ul>
+									<li><a href="#">Nothing interesting here</a></li>
+									<li><a href="#">This is just to show</a></li>
+									<li><a href="#">The drop-down menu</a></li>
+									<li><a href="#">With another level<span class="nav-arrow-right">&#9658;</span></a>
+										<ul>
+											<li><a href="#">Nothing interesting here</a></li>
+											<li><a href="#">This is just to show</a></li>
+											<li><a href="#">The drop-down menu</a></li>
+											<li><a href="#">With another level</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="./room.html">Twin room</a></li>
+							<li><a href="./room.html">Family room</a></li>
+							<li><a href="./room.html">Deluxe room</a></li>
+							<li><a href="./room.html">Lough view suite</a></li>
+							<li><a href="./room.html">VIP suite</a></li>
+							<li><a href="./room.html">Palace suite</a></li>
+						</ul>
+					</li>
+					<li><a href="./reservation.html">Reservation</a></li>
+					<li><a href="./pages.html">Template pages&nbsp;&nbsp;<span class="nav-arrow-down">&#9660;</span></a>
+						<ul>
+							<li class="nav-rounded-right-top"><a href="./index.html">Home page</a></li>
+							<li><a class="nav-current" href="./home-classic.html">Classic home</a></li>
+							<li><a href="./home-static.html">Static home</a></li>
+							<li><a href="./rooms.html">Rooms overview</a></li>
+							<li><a href="./room.html">Room description</a></li>
+							<li><a href="./reservation.html">Reservation</a></li>
+							<li><a href="./news.html">News</a></li>
+							<li><a href="./columns.html">Full-width with columns</a></li>
+							<li><a href="./gallery.html">Gallery</a></li>
+							<li><a href="./elements.html">Elements</a></li>
+							<li><a href="./location.html">Location</a></li>
+							<li><a href="./contact.html">Contact</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+			</div>
+			<!-- end main navigation -->
+			
+			<!-- begin slider-control -->
+			<div id="slider-control">
+				<a id="slider-button-left" href="#"></a>
+				<a id="slider-button-right" href="#"></a>
+			</div>
+			<!-- end slider-control -->
+			
+		</div>
+		<!-- end header -->
+		
+		<!-- begin top-area -->
+		<div id="top-area">
+				
+			<!-- begin form-login -->
+			<form id="form-login" action="">
+				<p id="top-area-text">
+					Sign in:
+				</p>
+				<p>
+					<input id="top-area-login" type="text" value="Type in your login" />
+					<input id="top-area-password" type="password" value="XXXXXX" />
+					<a id="top-area-button-submit" class="button-sign-in" href="#">SIGN IN</a>
+				</p>
+				<div id="top-area-nav">
+					<ul>
+						<li><a class="sign-in" href="#">Sign in</a></li>
+						<li><a href="#">Register</a></li>
+					</ul>
+					<div id="top-area-nav-left"></div>
+					<div id="top-area-nav-right"></div>
+				</div>
+			</form>
+			<!-- end form-login -->
+			
+			<div id="top-area-bottom"></div>
+			
+		</div>
+		<!-- end top-area -->
+			
+	</div>
+	<!-- end full-width-header -->
+	
+	<!-- begin full-width-slider -->
+	<div id="full-width-slider">	
+		
+		<!-- begin 1st slide -->
+		<div class="slide">
+			<div class="slide-image">
+				<img src="./img-demo/slide-1-bis.jpg" alt="" />
+			</div>
+			<div class="slide-caption-container">
+				<div class="slide-caption">
+					<p class="caption-heading">The Palace: a versatile theme</p>
+					<p>The Palace can be use to build any kind of website...</p>
+				</div>
+			</div>
+		</div>
+		<!-- end 1st slide -->
+		
+		<!-- begin 2nd slide -->
+		<div class="slide">
+			<div class="slide-image">
+				<img src="./img-demo/slide-2-bis.jpg" alt="" />
+			</div>
+			<div class="slide-caption-container">
+				<div class="slide-caption">
+					<p class="caption-heading">We love what we do!</p>
+					<p>Present your business in a stunning way!</p>
+				</div>
+			</div>
+		</div>
+		<!-- end 2nd slide -->
+		
+		<!-- begin 3rd slide -->
+		<div class="slide">
+			<div class="slide-image">
+				<img src="./img-demo/slide-3-bis.jpg" alt="" />
+			</div>
+			<div class="slide-caption-container">
+				<div class="slide-caption">
+					<p class="caption-heading">Mountains</p>
+					<p>in the fog...</p>
+				</div>
+			</div>
+		</div>
+		<!-- end 3rd slide -->
+			
+	</div>
+	<!-- end full-width-slider -->		
+		
+	<!-- begin main-content	-->
+	<div id="main-content">
+		
+		<div id="main-container-top"></div>
+		
+		<!-- main container -->
+		<div id="main-container">
+			
+			<div id="main-container-top-gradient"></div>
+			
+			<!-- begin first row -->
+			<div class="row">
+
+				<!-- begin 1st column -->
+				<div class="column-two-third-width">
+					
+					<h2 class="first-headings">What do we do and why?</h2>
+					
+					<p class="sub-headings">
+						We do what we do because we love what we do...
+					</p>
+					
+					<p>									
+						Well magna. Vivamus iaculis <b class="p-strong">sagittis dapibus</b> vivamus iaculis sagittis cenas <b class="p-strong">male cenas male</b>. 
+						Praesent nec risus arcu. <a href="./pages.html"><b>Maecenas malesuada</b></a> cursus mi!
+					</p>
+					
+					<p>
+						Vivamus iaculis sagittis dapibus. Maecenas malesuada bone. Lorem ipsum donec sic!
+						Well magna. <b class="p-strong"><a href="./pages.html">Vivamus iaculis</a></b> sagittis dapibus. <b class="p-strong">Praesent nec risus arcu.</b>
+					</p>
+					
+					<div class="column-third-of-two-third-width">
+						<h3 class="less-margin">Pixel painters</h3>
+						<p>
+							<img src="./img-demo/pens-small.jpg" alt="" />
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consul ita sectetur adipisos elit. Morbi doloris magna, luctus et sollicitudin velusne.
+						</p>
+						<p>
+							<a class="button-blue" href="./pages.html">LEARN MORE</a>
+						</p>
+					</div>
+					
+					<div class="column-third-of-two-third-width">
+						<h3 class="less-margin">Trusted relations</h3>
+						<p>
+							<img src="./img-demo/handshake.jpg" alt="" />
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consul ita sectetur adipisos elit. Morbi doloris magna, luctus et sollicitudin velusne.
+						</p>
+						<p>
+							<a class="button-blue" href="./pages.html">LEARN MORE</a>
+						</p>		
+					</div>
+					
+					<div class="column-third-of-two-third-width column-last">
+						<h3 class="less-margin">Always on time</h3>
+						<p>
+							<img src="./img-demo/calendar.jpg" alt="" />
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consul ita sectetur adipisos elit. Morbi doloris magna, luctus et sollicitudin velusne.
+						</p>
+						<p>
+							<a class="button-blue" href="./pages.html">LEARN MORE</a>
+						</p>
+					</div>
+					
+					<div class="clear"></div>
+					
+				</div>
+				<!-- end 1st column -->
+				
+				<!-- begin 2nd column -->
+				<div class="column-third-width column-last">
+					<h2 class="first-headings">Latest news</h2>
+					
+					<p class="sub-headings">
+						Check out what will happen!
+					</p>
+					
+					<!-- begin packages-first-container --> 
+					<!-- this slider is use in the index.html page for showcasing packages but you can put what you want in it - here news -->
+					<div id="packages-first-container">
+					
+						<a id="packages-button-left" class="button-left-blue" href="#"></a>
+						<a id="packages-button-right" class="button-right-blue" href="#"></a>
+						<div id="packages-button-left-disabled" class="button-left-disabled"></div>
+						<div id="packages-button-right-disabled" class="button-right-disabled"></div>
+						
+						<!-- begin packages-second-container -->
+						<div id="packages-second-container">
+					
+							<!-- begin packages-slide -->
+							<div id="packages-slide"> 
+							
+								<!-- begin 1st package -->
+								<div class="package">
+									<p>
+										<a href="#"><img src="./img-demo/white-pens.jpg" alt="" /></a>
+									</p>
+									
+									<p class="news-date">
+										November 3, 2011
+									</p>
+									<h3 class="less-margin">How do I make this?</h3>
+									<p>
+										Vivamus iaculis sagittis dapibus. Praesent nec risus arcu. Maecenas malesuada cursus mi.
+									</p>
+									<p>	
+										And well magna. Vivamus iaculis sagittis!
+									</p>
+									<p>									
+										Well magna. Vivamus iaculis sagittis dapibus vivamus iaculis sagittis cenas male cenas mal. Praesent nec risus arcu. Maecenas malesuada cursus mi!
+									</p>
+									<p>
+										<a class="button-blue aligncenter" href="./pages.html">LEARN MORE</a>
+									</p>
+								</div>
+								<!-- end 1st package -->
+								
+								<!-- begin 2nd package -->
+								<div class="package">
+									<p>
+										<a href="#"><img src="./img-demo/pages.jpg" alt="" /></a>
+									</p>
+									<p class="news-date">
+										November 4, 2011
+									</p>
+									<h3 class="less-margin">How do I make that?</h3>
+									<p>
+										Vivamus iaculis sagittis dapibus. Praesent nec risus arcu. Maecenas malesuada cursus mi.
+									</p>
+									<p>	
+										And well magna. Vivamus iaculis sagittis!
+									</p>
+									<p>									
+										Well magna. Vivamus iaculis sagittis dapibus vivamus iaculis sagittis cenas male cenas mal. Praesent nec risus arcu. Maecenas malesuada cursus mi!
+									</p>
+									<p>
+										<a class="button-blue aligncenter" href="./pages.html">LEARN MORE</a>
+									</p>
+								</div>
+								<!-- end 2nd package -->
+								
+								<!-- begin 3rd package -->
+								<div class="package">
+									<p>
+										<a href="#"><img src="./img-demo/chart.jpg" alt="" /></a>
+									</p>
+									<p class="news-date">
+										November 5, 2011
+									</p>
+									<h3 class="less-margin">I'll tell you next time...</h3>
+									<p>
+										Vivamus iaculis sagittis dapibus. Praesent nec risus arcu. Maecenas malesuada cursus mi.
+									</p>
+									<p>	
+										And well magna. Vivamus iaculis sagittis!
+									</p>
+									<p>									
+										Well magna. Vivamus iaculis sagittis dapibus vivamus iaculis sagittis cenas male cenas mal. Praesent nec risus arcu. Maecenas malesuada cursus mi!
+									</p>
+									<p>
+										<a class="button-blue aligncenter" href="./pages.html">LEARN MORE</a>
+									</p>
+								</div>
+								<!-- end 3rd package -->
+								
+							</div>
+							<!-- end packages-slide -->
+						
+						</div>
+						<!-- end packages-second-container -->
+						
+					</div>	
+					<!-- end packages-first-container -->
+					
+				</div>
+				<!-- end 2nd column -->
+				
+				<div class="clear"></div>
+				
+			</div>
+			<!-- end first row -->
+		
+			<!-- begin second-row (testimonials) -->
+			<div class="row row-grid-pattern">
+				<h2>Testimonials</h2>
+				
+				<p class="sub-headings">
+					Here are some testimonials sent by our customers.
+				</p>
+				
+				<!-- begin testimonials-first-container -->
+				<div id="testimonials-first-container">
+				
+					<a id="testimonials-button-left" class="button-left-blue" href="#"></a>
+					<a id="testimonials-button-right" class="button-right-blue" href="#"></a>
+					<div id="testimonials-button-left-disabled" class="button-left-disabled"></div>
+					<div id="testimonials-button-right-disabled" class="button-right-disabled"></div>
+					<div id="testimonials-number"></div>
+					
+					<!-- begin testimonials-second-container -->
+					<div id="testimonials-second-container">
+				
+						<!-- begin testimonials-slide -->
+						<div id="testimonials-slide">
+						
+							<!-- begin 1st testimonial -->
+							<div class="testimonial">
+							
+								<div class="testimonial-top"></div>
+							
+								<!-- begin testimonial-content -->
+								<div class="testimonial-content">
+									Lorem ipsum dolor sit amet consul ita sectetur adipisos elit. Morbi doloris magna, luctus et sollicitudin velusne. 
+									<img class="testimonial-image" src="./img-demo/testimonial-girl-1.jpg" alt="" />
+									Ut lorem ipsum dolor sit amet consul sectetur magnos adipiscing elit. Mors
+									amoru magna, luctus et sollicitudinus velus. Lorem ipsus amor sit amamu!
+									<br/>
+									<span class="testimonial-sender">Virginia, 29 years old, from Dublin</span>
+								</div>
+								<!-- end testimonial-content -->
+								
+								<div class="testimonial-bottom"></div>
+								
+							</div>
+							<!-- end 1st testimonial -->
+							
+							<!-- begin 2nd testimonial -->
+							<div class="testimonial">
+							
+								<div class="testimonial-top"></div>
+							
+								<!-- begin testimonial-content -->
+								<div class="testimonial-content">
+									Lorem ipsum dolor sit amet consul ita sectetur adipisos elit. Morbi doloris magna, luctus et sollicitudin velusne. 
+									<img class="testimonial-image" src="./img-demo/testimonial-girl-3.jpg" alt="" />
+									Ut lorem ipsum dolor sit amet consul sectetur magnos adipiscing elit. Mors
+									amoru magna, luctus et sollicitudinus velus. Lorem ipsus amor sit amamu!
+									<br/>
+									<span class="testimonial-sender">Sonia, 28 years old, from Dublin</span>
+								</div>
+								<!-- end testimonial-content -->
+								
+								<div class="testimonial-bottom"></div>
+								
+							</div>
+							<!-- end 2nd testimonial -->
+							
+							<!-- begin 3rd testimonial -->
+							<div class="testimonial">
+							
+								<div class="testimonial-top"></div>
+							
+								<!-- begin testimonial-content -->
+								<div class="testimonial-content">
+									Lorem ipsum dolor sit amet consul ita sectetur adipisos elit. Morbi doloris magna, luctus et sollicitudin velusne. 
+									<img class="testimonial-image" src="./img-demo/testimonial-girl-2.jpg" alt="" />
+									Ut lorem ipsum dolor sit amet consul sectetur magnos adipiscing elit. Mors
+									amoru magna, luctus et sollicitudinus velus. Lorem ipsus amor sit amamu!
+									<br/>
+									<span class="testimonial-sender">Alicia, 25 years old, from Dublin</span>
+								</div>
+								<!-- end testimonial-content -->
+								
+								<div class="testimonial-bottom"></div>
+								
+							</div>
+							<!-- end 3rd testimonial -->
+							
+							<!-- begin 4th testimonial -->
+							<div class="testimonial">
+							
+								<div class="testimonial-top"></div>
+							
+								<!-- begin testimonial-content -->
+								<div class="testimonial-content">
+									Lorem ipsum dolor sit amet consul ita sectetur adipisos elit. Morbi doloris magna, luctus et sollicitudin velusne. 
+									<img class="testimonial-image" src="./img-demo/testimonial-girl-4.jpg" alt="" />
+									Ut lorem ipsum dolor sit amet consul sectetur magnos adipiscing elit. Mors
+									amoru magna, luctus et sollicitudinus velus. Lorem ipsus amor sit amamu!
+									<br/>
+									<span class="testimonial-sender">Judith, 19 years old, from Dublin</span>
+								</div>
+								<!-- end testimonial-content -->
+								
+								<div class="testimonial-bottom"></div>
+								
+							</div>
+							<!-- end 4th testimonial -->
+							
+							<!-- begin 5th testimonial -->
+							<div class="testimonial">
+							
+								<div class="testimonial-top"></div>
+							
+								<!-- begin testimonial-content -->
+								<div class="testimonial-content">
+									Lorem ipsum dolor sit amet consul ita sectetur adipisos elit. Morbi doloris magna, luctus et sollicitudin velusne. 
+									<img class="testimonial-image" src="./img-demo/testimonial-girl-5.jpg" alt="" />
+									Ut lorem ipsum dolor sit amet consul sectetur magnos adipiscing elit. Mors
+									amoru magna, luctus et sollicitudinus velus. Lorem ipsus amor sit amamu!
+									<br/>
+									<span class="testimonial-sender">Ludmilia, 25 years old, from Dublin</span>
+								</div>
+								<!-- end testimonial-content -->
+								
+								<div class="testimonial-bottom"></div>
+								
+							</div>
+							<!-- end 5th testimonial -->
+
+						</div>
+						<!-- end testimonials-slide -->
+					
+					</div>
+					<!-- end testimonials-second-container -->
+					
+				</div>	
+				<!-- end testimonials-first-container -->
+				
+			</div>
+			<!-- end second-row (testimonials) -->
+			
+			<!-- begin third-row -->
+			<div class="row row-last">
+			
+				<!-- begin 1st column -->
+				<div class="column-fourth-width">
+					<h2>Location</h2>
+					<p class="sub-headings">
+					The Palace is in the heart of the city!
+					</p>
+					<p>
+						<a href="#"><img src="./img-demo/mountain.jpg" alt="" /></a>
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consul sectetur adipiscing elit. Morbi dolor magna, luctus et sollicitudin velus. <br/>
+						<a class="button-blue" href="./pages.html">LEARN MORE</a>
+					</p>
+				</div>
+				<!-- end 1st column -->
+				
+				<!-- begin 2nd column -->
+				<div class="column-fourth-width">
+					<h2>History</h2>
+					<p class="sub-headings">
+						Find out more about the history of a great company!
+					</p>
+					<p>
+						<a href="#"><img src="./img-demo/book.jpg" alt="" /></a>
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consul sectetur adipiscing elit. Morbi dolor magna, luctus et sollicitudin velus. <br/>
+						<a class="button-blue" href="./pages.html">LEARN MORE</a>
+					</p>
+				</div>
+				<!-- end 2nd column -->
+				
+				<!-- begin 3rd column -->
+				<div class="column-fourth-width">
+					<h2>The Office</h2>
+					<p class="sub-headings">
+						Where we create our amazing and gorgeous stuff...
+					</p>
+					<p>
+						<a href="#"><img src="./img-demo/massage.jpg" alt="" /></a>
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consul sectetur adipiscing elit. Morbi dolor magna, luctus et sollicitudin velus. <br/>
+						<a class="button-blue" href="./pages.html">LEARN MORE</a>
+					</p>
+				</div>
+				<!-- end 3rd column -->
+				
+				<!-- begin 4th column -->
+				<div class="column-fourth-width column-last">
+					<h2>The Team</h2>
+					<p class="sub-headings">
+						These nice people are here to make your business growing...
+					</p>
+					<p>
+						<a href="#"><img src="./img-demo/team.jpg" alt="" /></a>
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consul sectetur adipiscing elit. Morbi dolor magna, luctus et sollicitudin velus. <br/>
+						<a class="button-blue" href="./pages.html">LEARN MORE</a>
+					</p>
+				</div>
+				<!-- end 4th column -->
+				
+				<div class="clear"></div>
+				
+			</div>
+			<!-- end third row -->
+			
+		</div>
+		<!-- end main container -->
+		
+		<div id="main-container-bottom"></div>
+	
+	</div>
+	<!-- end main content -->
+	
+	<!-- begin full-width-footer -->
+	<div id="full-width-footer">
+	
+		<!-- begin footer-image -->	
+		<div id="footer-image">
+			<img src="img-demo/bg-footer.jpg" alt="" />
+		</div>
+		<!-- end footer-image -->
+		
+		<div id="footer-mask"></div>
+		
+		<!-- begin footer-content-container -->
+		<div id="footer-content-container">
+			
+			<!-- begin footer-content -->
+			<div id="footer-content">
+			
+				<!-- begin 1st column -->
+				<div class="column-fifth-width">
+					<h3>Navigation</h3>
+					<ul>
+						<li><a href="./index.html">Home page</a></li>
+						<li><a href="./home-classic.html">Classic home</a></li>
+						<li><a href="./home-static.html">Static home</a></li>
+						<li><a href="./rooms.html">Rooms overview</a></li>
+						<li><a href="./room.html">Room description</a></li>
+						<li><a href="./reservation.html">Reservation</a></li>
+						<li><a href="./news.html">News (with right sidebar)</a></li>
+						<li><a href="./columns.html">Full-width with columns</a></li>
+						<li><a href="./gallery.html">Gallery</a></li>
+						<li><a href="./elements.html">Elements</a></li>
+						<li><a href="./location.html">Location</a></li>
+						<li><a href="./contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<!-- end 1st column -->
+				
+				<!-- begin 2nd column -->
+				<div class="column-fifth-width">
+					<h3>Rooms &amp; Suites</h3>
+					<ul>
+						<li><a href="./room.html">Single room</a></li>
+						<li><a href="./room.html">Double room</a></li>
+						<li><a href="./room.html">Twin room</a></li>
+						<li><a href="./room.html">Family room</a></li>
+						<li><a href="./room.html">Deluxe room</a></li>
+						<li><a href="./room.html">Lough view suite</a></li>
+						<li><a href="./room.html">VIP suite</a></li>
+						<li><a href="./room.html">Palace suite</a></li>
+						<li><a href="./room.html">Deluxe room</a></li>
+						<li><a href="./room.html">Lough view suite</a></li>
+						<li><a href="./room.html">VIP suite</a></li>
+						<li><a href="./room.html">Palace suite</a></li>
+					</ul>
+				</div>
+				<!-- end 2nd column -->
+				
+				<!-- begin 3rd column -->
+				<div class="column-fifth-width">
+					<h3>About The Palace</h3>
+					<ul>
+						<li><a href="./pages.html">Overview</a></li>
+						<li><a href="./pages.html">Lorem ipsum</a></li>
+						<li><a href="./pages.html">Team</a></li>
+					</ul>	
+					<h3>The Spa</h3>
+					<ul>
+						<li><a href="./pages.html">Massages</a></li>
+						<li><a href="./pages.html">Swiming pool</a></li>
+						<li><a href="./pages.html">Massages</a></li>
+						<li><a href="./pages.html">Swiming pool</a></li>
+						<li><a href="./pages.html">Massages</a></li>
+						<li><a href="./pages.html">Swiming pool</a></li>
+					</ul>
+				</div>
+				<!-- end 3rd column -->
+				
+				<!-- begin 4th column -->
+				<div class="column-fifth-width">
+					<h3>Packages</h3>
+					<ul>
+						<li><a href="./news.html">Massage &amp; Spa week</a></li>
+						<li><a href="./news.html">Bed &amp; Breakfast</a></li>
+						<li><a href="./news.html">Friday to Monday</a></li>
+					</ul>	
+					<h3>Get great deals</h3>
+					<ul>
+						<li><a href="#">The Palace on Twitter</a></li>
+						<li><a href="#">The Palace on Facebook</a></li>
+						<li><a href="#">The Palace on Lorem</a></li>
+						<li><a href="#">The Palace on Ipsum</a></li>
+						<li><a href="#">The Palace on Amor</a></li>
+					</ul>
+				</div>
+				<!-- end 4th column -->
+				
+				<!-- begin 5th column -->
+				<div class="column-fifth-width column-last">
+					<h3>Footer easy to use</h3>
+					<p>
+						Put a wide photo and 
+						the CSS rules included in 
+						this HTML theme
+						will tone it down and add a gradient 
+						to smoothly join
+						the main background (you may need to
+						change the color of the footer text 
+						if you go
+						with a dark background).
+					</p>
+				</div>
+				<!-- end 5th column -->
+
+				<div class="clear"></div>																																																																																								
+				
+				<!-- begin footer-copyright -->
+				<div id="footer-copyright">
+				&copy; Copyright 2011 The Palace  -  Designed by <a href="http://themeforest.net/user/AurelienD/?ref=AurelienD">AurelienD</a> for <a href="http://themeforest.net/?ref=AurelienD">ThemeForest</a>
+				</div>
+				<!-- end footer-copyright -->
+			</div>
+			<!-- end footer-content -->
+			
+		</div>
+		<!-- end footer-content-container -->
+	
+	</div>
+	<!--end full-width-footer -->
+	
+	
+	<!-- begin demo-color -->
+	<div id="demo-color">
+		<b>Background color:</b><br/><br/>
+		<div id="colorSelector"><div id="colorSelectorBackground"></div></div>
+		Note that you can easily change the color of all buttons.
+		7 colors are predefined. Have a look at <a href="./elements.html">the elements page.</a>
+		<a href="#" id="button-settings"></a>
+	</div>
+	<!-- end demo-color -->
+	
+	<!-- begin demo-buy -->
+	<div id="demo-buy">
+		<a class="button-buy-it" href="http://themeforest.net/user/AurelienD/portfolio/?ref=AurelienD">BUY THIS THEME!</a>
+		<a href="#" id="button-buy"></a>
+	</div>
+	<!-- end demo-buy -->
+																																																																																								<div style="position: absolute; top: 0; left: -9999px">Le lapin blanc needs to be follow! Did you know this?</div>			
+</body>
+</html>

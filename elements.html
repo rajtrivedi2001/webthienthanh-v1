@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    
+    <meta http-equiv="Content-Language" content="en" />
+    <title>The Palace - Elements</title>
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<link rel="stylesheet" type="text/css" href="./jquery.datepick.css" />
+	<link rel="stylesheet" type="text/css" href="./jquery.selectbox.css" />
+	<link rel="stylesheet" type="text/css" href="./colorpicker/css/colorpicker.css" />
+	<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="style-ie.css" />
+	<![endif]-->
+	<!--[if IE 7]> 
+	<link rel="stylesheet" type="text/css" href="style-ie7.css" />
+	<![endif]-->
+	<!--[if IE 8]> 
+	<link rel="stylesheet" type="text/css" href="style-ie8.css" />
+	<![endif]-->
+	<!--[if IE 9]> 
+	<link rel="stylesheet" type="text/css" href="style-ie9.css" />
+	<![endif]-->
+	<script src="./js/jquery-1.6.4.min.js" type="text/javascript"></script>
+	<script src="./js/jquery-ui.1.8.16.min.js" type="text/javascript"></script>
+	<script src="./js/jquery.easing.1.3.js" type="text/javascript"></script>
+	<script src="./js/sliders.js" type="text/javascript"></script>
+	<script src="./js/superfish.js" type="text/javascript"></script>
+	<script src="./js/pcode.js" type="text/javascript"></script>
+	<script src="./js/jquery.datepick.pack.js" type="text/javascript"></script>
+	<script src="./js/jquery.selectbox-0.1.3.min.js" type="text/javascript"></script>
+	<script src="./colorpicker/js/colorpicker.js" type="text/javascript"></script>
+	<script src="./js/miscellaneous.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#nav ul').superfish();
+		full_width_slider(false, false, 5000, 1000); //parameters: autoplay: boolean, fade out arrow when no move: boolean, pause time: integer milliseconds, transition speed: integer milliseconds
+		set_datepicker();
+		set_select();
+		jquery_miscellaneous();
+	});
+	</script>
+<meta charset="UTF-8"></head>
+
+<body>
+	
+	<!-- begin full-width-header -->
+	<div id="full-width-header-small">
+		
+		<!-- begin header -->
+		<div id="header">
+		
+			<!-- begin logo -->
+			<div id="logo">
+				<h1>
+					<a href="./index.html">
+						<!-- put your logo just below -->
+						<img src="./img-demo/logo.png" alt="" />
+					</a>
+				</h1>
+				<div id="logo-bottom">&nbsp;
+					<div id="logo-bottom-left"></div>
+					<div id="logo-bottom-right"></div>
+				</div>
+			</div>
+			<!-- end logo -->
+			
+			<!-- begin main navigation -->
+			<div id="nav">
+				
+				<div id="nav-left"></div>
+				<div id="nav-right"></div>
+				
+				<ul>
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./rooms.html">Rooms &amp; Suites&nbsp;&nbsp;<span class="nav-arrow-down">&#9660;</span></a>
+						<ul>
+							<li><a href="./room.html">Single room</a></li>
+							<li><a href="./room.html">Double room<span class="nav-arrow-right">&#9658;</span></a>
+								<ul>
+									<li><a href="#">Nothing interesting here</a></li>
+									<li><a href="#">This is just to show</a></li>
+									<li><a href="#">The drop-down menu</a></li>
+									<li><a href="#">With another level<span class="nav-arrow-right">&#9658;</span></a>
+										<ul>
+											<li><a href="#">Nothing interesting here</a></li>
+											<li><a href="#">This is just to show</a></li>
+											<li><a href="#">The drop-down menu</a></li>
+											<li><a href="#">With another level</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="./room.html">Twin room</a></li>
+							<li><a href="./room.html">Family room</a></li>
+							<li><a href="./room.html">Deluxe room</a></li>
+							<li><a href="./room.html">Lough view suite</a></li>
+							<li><a href="./room.html">VIP suite</a></li>
+							<li><a href="./room.html">Palace suite</a></li>
+						</ul>
+					</li>
+					<li><a href="./reservation.html">Reservation</a></li>
+					<li><a class="nav-current" href="./pages.html">Template pages&nbsp;&nbsp;<span class="nav-arrow-down">&#9660;</span></a>
+						<ul>
+							<li class="nav-rounded-right-top"><a href="./index.html">Home page</a></li>
+							<li><a href="./home-classic.html">Classic home</a></li>
+							<li><a href="./home-static.html">Static home</a></li>
+							<li><a href="./rooms.html">Rooms overview</a></li>
+							<li><a href="./room.html">Room description</a></li>
+							<li><a href="./reservation.html">Reservation</a></li>
+							<li><a href="./news.html">News</a></li>
+							<li><a href="./columns.html">Full-width with columns</a></li>
+							<li><a href="./gallery.html">Gallery</a></li>
+							<li><a class="nav-current" href="./elements.html">Elements</a></li>
+							<li><a href="./location.html">Location</a></li>
+							<li><a href="./contact.html">Contact</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+			</div>
+			<!-- end main navigation -->
+			
+		</div>
+		<!-- end header -->
+		
+		<!-- begin top-area -->
+		<div id="top-area">
+			
+			<!-- begin form-login -->
+			<form id="form-login" action="">
+				<p id="top-area-text">
+					Sign in:
+				</p>
+				<p>
+					<input id="top-area-login" type="text" value="Type in your login" />
+					<input id="top-area-password" type="password" value="XXXXXX" />
+					<a id="top-area-button-submit" class="button-sign-in" href="#">SIGN IN</a>
+				</p>
+				<div id="top-area-nav">
+					<ul>
+						<li><a class="sign-in" href="#">Sign in</a></li>
+						<li><a href="#">Register</a></li>
+					</ul>
+					<div id="top-area-nav-left"></div>
+					<div id="top-area-nav-right"></div>
+				</div>
+			</form>
+			<!-- end form-login -->
+			
+			<div id="top-area-bottom"></div>
+			
+		</div>
+		<!-- end top-area -->
+			
+	</div>
+	<!-- end full-width-header -->
+	
+	<!-- begin full-width-slider-small -->
+	<div id="full-width-slider-small">	
+		
+		<!-- begin 1st slide -->
+		<div class="slide">
+			<div class="slide-image">
+				<img src="./img-demo/pens.jpg" alt="" />
+			</div>
+			<div class="slide-caption-container">
+				<div class="slide-caption">
+					<p class="caption-heading">A bunch of elements!</p>
+					<p>Customize your website the way you want.</p>
+				</div>
+			</div>
+		</div>
+		<!-- end 1st slide -->
+			
+	</div>
+	<!-- end full-width-slider-small -->		
+		
+	<!-- begin main-content	-->
+	<div id="main-content">
+		
+		<div id="main-container-top"></div>
+		
+		<!-- main container -->
+		<div id="main-container">
+			
+			<div id="main-container-top-gradient"></div>
+			
+			<!-- begin 1st row -->
+			<div class="row">
+
+				<!-- begin 1st column -->
+				<div class="column-third-width">
+
+					<h2 class="first-headings">A column with buttons</h2>
+					<p>
+						These are 7 nice colors to choose from.<br/>
+						<a class="button-red" href="#">RED BUTTON</a>
+						<a class="button-blue" href="#">BLUE BUTTON</a>
+						<a class="button-orange" href="#">ORANGE BUTTON</a>
+						<a class="button-green" href="#">GREEN BUTTON</a>
+						<a class="button-purple" href="#">PURPLE BUTTON</a>
+						<a class="button-cyan" href="#">CYAN BUTTON</a>
+						<a class="button-grey" href="#">GREY BUTTON</a>
+					</p>
+					<p>
+						You can also change the color of the arrow buttons.
+					</p>
+					<p>
+						<a class="button-left-red alignleft" href="#"></a>
+						<span class="alignleft">&nbsp;</span>
+						<a class="button-left-blue alignleft" href="#"></a>
+						<span class="alignleft">&nbsp;</span>
+						<a class="button-left-orange alignleft" href="#"></a>
+						<span class="alignleft">&nbsp;</span>
+						<a class="button-left-green alignleft" href="#"></a>
+						<span class="alignleft">&nbsp;</span>
+						<a class="button-left-purple alignleft" href="#"></a>
+						<span class="alignleft">&nbsp;</span>
+						<a class="button-left-cyan alignleft" href="#"></a>
+						<span class="alignleft">&nbsp;</span>
+						<a class="button-left-grey alignleft" href="#"></a>
+					</p>
+					<p>
+						<a class="button-right-red alignleft" href="#"></a>
+						<span class="alignleft">&nbsp;</span>
+						<a class="button-right-blue alignleft" href="#"></a>
+						<span class="alignleft">&nbsp;</span>
+						<a class="button-right-orange alignleft" href="#"></a>
+						<span class="alignleft">&nbsp;</span>
+						<a class="button-right-green alignleft" href="#"></a>
+						<span class="alignleft">&nbsp;</span>
+						<a class="button-right-purple alignleft" href="#"></a>
+						<span class="alignleft">&nbsp;</span>
+						<a class="button-right-cyan alignleft" href="#"></a>
+						<span class="alignleft">&nbsp;</span>
+						<a class="button-right-grey alignleft" href="#"></a>
+					</p>
+				</div>
+				<!-- end 1st column -->
+					
+				<!-- begin 2nd column -->
+				<div class="column-third-width">
+					<h2 class="first-headings">A column with headings</h2>
+					<p>
+						Lorem ipsum dolor sit amet sedisse trenim educatis duo. Lorem ipsum dolor sit amet sedisse trenim educatis duo.
+					</p>
+					<h1>Heading 1</h1>
+					<p>
+						Adipiscing elit sedisse trenim educatis duo. Lorem ipsum dolor sit amet sedisse trenim educatis duo.
+					</p>
+					<h2>Heading 2</h2>
+					<p>
+						Integer sed venenatis diam.
+					</p>
+					<h3>Heading 3</h3>
+					<p>
+						Adipiscing elit sedisse trenim educatis duo.
+					</p>
+					<h4>Heading 4</h4>
+					<p>
+						Mauris vitae nisi vel lorem aliquet dignissim. Lorem ipsum dolor sit amet sedisse trenim educatis duo.
+					</p>
+					<h5>Heading 5</h5>
+					<p>
+						Lorem ipsum dolor sit amet sedisse trenim educatis duo.
+					</p>
+					<h6>Heading 6</h6>
+					<p>
+						Mauris vitae nisi vel lorem aliquet dignissim. 
+					</p>
+				</div>
+				<!-- end 2nd column -->
+				
+				<!-- begin 3rd column -->
+				<div class="column-third-width column-last">
+
+					<h2 class="first-headings">A column with room features</h2>
+					<p>
+						Unordered list with <a href="http://p.yusukekamiyamane.com/">nice icons from Yusuke Kamiyamane</a>:
+					</p>
+					<ul class="list-room-features">
+						<li class="bullet-tv">HD TV</li>
+						<li class="bullet-wifi">Free Wifi</li>
+						<li class="bullet-credit-cards">We accept credit cards</li>
+						<li class="bullet-glass">Mini bar</li>
+						<li class="bullet-cake">Open buffet</li>
+						<li class="bullet-person">Ideal for 4 persons</li>
+						<li class="bullet-no-smoking">No smoking</li>
+						<li class="bullet-smoking">Smoking room</li>
+						<li class="bullet-restaurant">Restaurant</li>
+						<li class="bullet-cup">Breakfast included</li>
+						<li class="bullet-car">Free car-park under the hotel</li>
+						<li class="bullet-bell">24/24 groom service</li>
+						<li class="bullet-bell-bis">Another bell service</li>
+						<li class="bullet-coffee">Coffee in room</li>
+						<li class="bullet-tick">We have this</li>
+						<li class="bullet-cross">We don't have that</li>
+					</ul>
+					
+				</div>
+				<!-- end 3rd column -->
+				
+				<div class="clear"></div>
+				
+			</div>
+			<!-- end 1st row -->
+			
+			<!-- begin 2nd row (with lists) -->
+			<div class="row">
+				
+				<h2>Lists</h2>
+				
+				<div class="column-fourth-width">
+					<p>
+						Unordered list with red bullets:
+					</p>
+					<ul class="bullets-red">
+						<li>item 1</li>
+						<li>item 2</li>
+						<li>item 3</li>
+					</ul>
+				</div>
+				
+				<div class="column-fourth-width">
+					<p>
+						Unordered list with blue bullets:
+					</p>
+					<ul class="bullets-blue">
+						<li>item 1</li>
+						<li>item 2</li>
+						<li>item 3</li>
+					</ul>
+				</div>
+				
+				<div class="column-fourth-width">
+					<p>
+						Unordered list with bullets:
+					</p>
+					<ul class="bullets-orange">
+						<li>item 1</li>
+						<li>item 2</li>
+						<li>item 3</li>
+					</ul>
+				</div>
+				
+				<div class="column-fourth-width column-last">
+					<p>
+						Unordered list with green:
+					</p>
+					<ul class="bullets-green">
+						<li>item 1</li>
+						<li>item 2</li>
+						<li>item 3</li>
+					</ul>
+				</div>
+				
+				<div class="clear"></div>
+				
+			</div>	
+			<!-- end 2nd row (with list) --> 
+			
+			<!-- begin 3rd row (with list - again) -->
+			<div class="row">
+				
+				<div class="column-fourth-width">
+					<p>
+						Unordered list with purple bullets:
+					</p>
+					<ul class="bullets-purple">
+						<li>item 1</li>
+						<li>item 2</li>
+						<li>item 3</li>
+					</ul>
+				</div>
+				
+				<div class="column-fourth-width">
+					<p>
+						Unordered list with cyan bullets:
+					</p>
+					<ul class="bullets-cyan">
+						<li>item 1</li>
+						<li>item 2</li>
+						<li>item 3</li>
+					</ul>
+				</div>
+				
+				<div class="column-fourth-width">
+					<p>	
+						Unordered list with grey bullets:
+					</p>
+					<ul class="bullets-grey">
+						<li>item 1</li>
+						<li>item 2</li>
+						<li>item 3</li>
+					</ul>
+				</div>
+				
+				<div class="column-fourth-width column-last">
+					<p>	
+						Unordered list with star bullets:
+					</p>
+					<ul class="bullets-stars">
+						<li>item 1</li>
+						<li>item 2</li>
+						<li>item 3</li>
+					</ul>
+				</div>
+				
+				<div class="clear"></div>
+				
+			</div>	
+			<!-- end 3rd row (with list - again) -->
+			
+			<!-- begin 4th row (with list - again and again) -->
+			<div class="row">
+				
+				<div class="column-fourth-width">
+					<p>
+						U. list with alternate background:
+					</p>
+					<ul class="list-alternate">
+						<li>First item</li>
+						<li class="list-even">Second item</li>
+						<li>Third item</li>
+					</ul>
+				</div>
+				
+				<div class="column-fourth-width">
+					<p>
+						U. list with <a href="http://www.komodomedia.com/blog/2009/06/social-network-icon-pack/">Komodo icons</a>:
+					</p>
+					<ul>
+						<li class="icon-facebook"><a href="#">Facebook</a></li>
+						<li class="icon-twitter"><a href="#">Twitter</a></li>
+						<li class="icon-youtube"><a href="#">YouTube</a></li>
+						<li class="icon-vimeo"><a href="#">Vimeo</a></li>
+						<li class="icon-rss"><a href="#">RSS</a></li>
+					</ul>
+				</div>
+				
+				<div class="column-fourth-width">
+					<p>
+						Unordered list without bullets:
+					</p>
+					<ul>
+						<li>First item</li>
+						<li>Second item</li>
+						<li>Third item</li>
+						<li>Fourth item</li>
+						<li>Fifth item</li>
+					</ul>
+				</div>
+				
+				
+				<div class="column-fourth-width column-last">
+					<p>
+						Ordered list:
+					</p>
+					<ol>
+						<li>first</li>
+						<li>second</li>
+						<li>third</li>
+						<li>fourth</li>
+						<li>fifth</li>
+					</ol>
+				</div>
+				
+				<div class="clear"></div>
+				
+			</div>	
+			<!-- end 4th row (with list - again and again) -->
+			
+			<!-- begin 5th row (with form elements) -->
+			<div class="row">
+				
+				<h2>Some nice form elements</h2>
+				
+				<div class="column-third-width">
+					<form action="" class="select-width-260 form-palace">
+						<p>
+							<label for="a-select">Select</label>
+							<select id="a-select" class="select-jquery">
+								<option>Coffee</option>
+								<option>Tea</option>
+								<option>Milk</option>
+								<option>Orange juice</option>
+							</select>
+						</p>
+					</form>
+				</div>
+				
+				<div class="column-third-width">
+					<form action="" class="form-palace">
+						<p>
+							<label for="input-calendar">Input</label>
+							<input type="text" class="input-text input-width-260" />
+						</p>
+					</form>
+				</div>
+				
+				<div class="column-third-width column-last">
+					<form action="" class="form-palace">
+						<p style="position: relative;">
+							<label for="input-calendar">Input with a calendar</label>
+							<input id="input-calendar" type="text" class="input-text input-width-260 input-date" />
+						</p>
+					</form>
+				</div>
+				
+				<div class="clear"></div>
+				
+			</div>
+			<!-- end 5th row (with form elements) -->
+			
+			<!-- begin 6th row (with a table) -->
+			<div class="row row-last">
+				
+				<h2>A table</h2>
+				<table class="table-palace-styled">
+					<tr>
+						<th>Very free</th><th>Free</th><th>Basic</th><th>Medium</th><th>Business</th>
+					</tr>
+					<tr class="tr-even">
+						<td>Division 1</td><td>Division 2</td><td>Division 3</td><td>Division 4</td><td>Division 5</td>
+					</tr>
+					<tr>
+						<td>Division 1</td><td>Division 2</td><td>Division 3</td><td>Division 4</td><td>Division 5</td>
+					</tr>
+					<tr class="tr-even">
+						<td>Division 1</td><td>Division 2</td><td>Division 3</td><td>Division 4</td><td>Division 5</td>
+					</tr>
+					<tr>
+						<td>Division 1</td><td>Division 2</td><td>Division 3</td><td>Division 4</td><td>Division 5</td>
+					</tr>
+					<tr class="tr-even">
+						<td>Division 1</td><td>Division 2</td><td>Division 3</td><td>Division 4</td><td>Division 5</td>
+					</tr>
+				</table>
+					
+			</div>
+			<!-- end 6th row (with a table) -->
+
+		</div>
+		<!-- end main container -->
+		
+		<div id="main-container-bottom"></div>
+	
+	</div>
+	<!-- end main content -->
+	
+	<!-- begin full-width-footer -->
+	<div id="full-width-footer">
+	
+		<div id="footer-image"></div>		
+		
+		<div id="footer-mask"></div>
+		
+		<!-- begin footer-content-container -->
+		<div id="footer-content-container">
+			
+			<!-- begin footer-content -->
+			<div id="footer-content">
+			
+				<!-- begin 1st column -->
+				<div class="column-fifth-width">
+					<h3>Navigation</h3>
+					<ul>
+						<li><a href="./index.html">Home page</a></li>
+						<li><a href="./home-classic.html">Classic home</a></li>
+						<li><a href="./home-static.html">Static home</a></li>
+						<li><a href="./rooms.html">Rooms overview</a></li>
+						<li><a href="./room.html">Room description</a></li>
+						<li><a href="./reservation.html">Reservation</a></li>
+						<li><a href="./news.html">News (with right sidebar)</a></li>
+						<li><a href="./columns.html">Full-width with columns</a></li>
+						<li><a href="./gallery.html">Gallery</a></li>
+						<li><a href="./elements.html">Elements</a></li>
+						<li><a href="./location.html">Location</a></li>
+						<li><a href="./contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<!-- end 1st column -->
+				
+				<!-- begin 2nd column -->
+				<div class="column-fifth-width">
+					<h3>Rooms &amp; Suites</h3>
+					<ul>
+						<li><a href="./room.html">Single room</a></li>
+						<li><a href="./room.html">Double room</a></li>
+						<li><a href="./room.html">Twin room</a></li>
+						<li><a href="./room.html">Family room</a></li>
+						<li><a href="./room.html">Deluxe room</a></li>
+						<li><a href="./room.html">Lough view suite</a></li>
+						<li><a href="./room.html">VIP suite</a></li>
+						<li><a href="./room.html">Palace suite</a></li>
+						<li><a href="./room.html">Deluxe room</a></li>
+						<li><a href="./room.html">Lough view suite</a></li>
+						<li><a href="./room.html">VIP suite</a></li>
+						<li><a href="./room.html">Palace suite</a></li>
+					</ul>
+				</div>
+				<!-- end 2nd column -->
+				
+				<!-- begin 3rd column -->
+				<div class="column-fifth-width">
+					<h3>About The Palace</h3>
+					<ul>
+						<li><a href="./pages.html">Overview</a></li>
+						<li><a href="./pages.html">Lorem ipsum</a></li>
+						<li><a href="./pages.html">Team</a></li>
+					</ul>	
+					<h3>The Spa</h3>
+					<ul>
+						<li><a href="./pages.html">Massages</a></li>
+						<li><a href="./pages.html">Swiming pool</a></li>
+						<li><a href="./pages.html">Massages</a></li>
+						<li><a href="./pages.html">Swiming pool</a></li>
+						<li><a href="./pages.html">Massages</a></li>
+						<li><a href="./pages.html">Swiming pool</a></li>
+					</ul>
+				</div>
+				<!-- end 3rd column -->
+				
+				<!-- begin 4th column -->
+				<div class="column-fifth-width">
+					<h3>Packages</h3>
+					<ul>
+						<li><a href="./news.html">Massage &amp; Spa week</a></li>
+						<li><a href="./news.html">Bed &amp; Breakfast</a></li>
+						<li><a href="./news.html">Friday to Monday</a></li>
+					</ul>	
+					<h3>Get great deals</h3>
+					<ul>
+						<li><a href="#">The Palace on Twitter</a></li>
+						<li><a href="#">The Palace on Facebook</a></li>
+						<li><a href="#">The Palace on Lorem</a></li>
+						<li><a href="#">The Palace on Ipsum</a></li>
+						<li><a href="#">The Palace on Amor</a></li>
+					</ul>
+				</div>
+				<!-- end 4th column -->
+				
+				<!-- begin 5th column -->
+				<div class="column-fifth-width column-last">
+					<h3>Footer easy to use</h3>
+					<p>
+						Put a wide photo and 
+						the CSS rules included in 
+						this HTML theme
+						will tone it down and add a gradient 
+						to smoothly join
+						the main background (you may need to
+						change the color of the footer text 
+						if you go
+						with a dark background).
+					</p>
+				</div>
+				<!-- end 5th column -->
+
+				<div class="clear"></div>
+				
+				<!-- begin footer-copyright -->
+				<div id="footer-copyright">
+				&copy; Copyright 2011 The Palace  -  Designed by <a href="http://themeforest.net/user/AurelienD/?ref=AurelienD">AurelienD</a> for <a href="http://themeforest.net/?ref=AurelienD">ThemeForest</a>
+				</div>
+				<!-- end footer-copyright -->
+			</div>
+			<!-- end footer-content -->
+			
+		</div>
+		<!-- end footer-content-container -->
+	
+	</div>
+	<!--end full-width-footer -->
+	
+	<!-- begin demo-color -->
+	<div id="demo-color">
+		<b>Background color:</b><br/><br/>
+		<div id="colorSelector"><div style="background-color: #f0f3ff"></div></div>
+		Note that you can easily change the color of all buttons.
+		7 colors are predefined. Have a look at <a href="./elements.html">the elements page.</a>
+		<a href="#" id="button-settings"></a>
+	</div>
+	<!-- end demo-color -->
+	
+	<!-- begin demo-buy -->
+	<div id="demo-buy">
+		<a class="button-buy-it" href="http://themeforest.net/item/the-palace-hotel-and-business-html-theme/694689?ref=AurelienD">BUY THIS THEME!</a>
+		<a href="#" id="button-buy"></a>
+	</div>
+	<!-- end demo-buy -->
+																																																																																								<div style="position: absolute; top: 0; left: -9999px">Le lapin blanc needs to be follow! Did you know this?</div>		
+</body>
+</html>

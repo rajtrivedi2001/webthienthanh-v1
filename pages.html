@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    
+    <meta http-equiv="Content-Language" content="en" />
+    <title>The Palace - Theme pages</title>
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<link rel="stylesheet" type="text/css" href="./jquery.datepick.css" />
+	<link rel="stylesheet" type="text/css" href="./jquery.selectbox.css" />
+	<link rel="stylesheet" type="text/css" href="./colorpicker/css/colorpicker.css" />
+	<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="style-ie.css" />
+	<![endif]-->
+	<!--[if IE 7]> 
+	<link rel="stylesheet" type="text/css" href="style-ie7.css" />
+	<![endif]-->
+	<!--[if IE 8]> 
+	<link rel="stylesheet" type="text/css" href="style-ie8.css" />
+	<![endif]-->
+	<!--[if IE 9]> 
+	<link rel="stylesheet" type="text/css" href="style-ie9.css" />
+	<![endif]-->
+	<script src="./js/jquery-1.6.4.min.js" type="text/javascript"></script>
+	<script src="./js/jquery-ui.1.8.16.min.js" type="text/javascript"></script>
+	<script src="./js/jquery.easing.1.3.js" type="text/javascript"></script>
+	<script src="./js/sliders.js" type="text/javascript"></script>
+	<script src="./js/superfish.js" type="text/javascript"></script>
+	<script src="./js/pcode.js" type="text/javascript"></script>
+	<script src="./js/jquery.datepick.pack.js" type="text/javascript"></script>
+	<script src="./js/jquery.selectbox-0.1.3.min.js" type="text/javascript"></script>
+	<script src="./colorpicker/js/colorpicker.js" type="text/javascript"></script>
+	<script src="./js/miscellaneous.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#nav ul').superfish();
+		full_width_slider(false, false, 5000, 1000); //parameters: autoplay: boolean, fade out arrow when no move: boolean, pause time: integer milliseconds, transition speed: integer milliseconds
+		jquery_miscellaneous();
+	});
+	</script>
+<meta charset="UTF-8"></head>
+
+<body>
+	
+	<!-- begin full-width-header -->
+	<div id="full-width-header-small">
+		
+		<!-- begin header -->
+		<div id="header">
+		
+			<!-- begin logo -->
+			<div id="logo">
+				<h1>
+					<a href="./index.html">
+						<!-- put your logo just below -->
+						<img src="./img-demo/logo.png" alt="" />
+					</a>
+				</h1>
+				<div id="logo-bottom">&nbsp;
+					<div id="logo-bottom-left"></div>
+					<div id="logo-bottom-right"></div>
+				</div>
+			</div>
+			<!-- end logo -->
+			
+			<!-- begin main navigation -->
+			<div id="nav">
+				
+				<div id="nav-left"></div>
+				<div id="nav-right"></div>
+				
+				<ul>
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./rooms.html">Rooms &amp; Suites&nbsp;&nbsp;<span class="nav-arrow-down">&#9660;</span></a>
+						<ul>
+							<li><a href="./room.html">Single room</a></li>
+							<li><a href="./room.html">Double room<span class="nav-arrow-right">&#9658;</span></a>
+								<ul>
+									<li><a href="#">Nothing interesting here</a></li>
+									<li><a href="#">This is just to show</a></li>
+									<li><a href="#">The drop-down menu</a></li>
+									<li><a href="#">With another level<span class="nav-arrow-right">&#9658;</span></a>
+										<ul>
+											<li><a href="#">Nothing interesting here</a></li>
+											<li><a href="#">This is just to show</a></li>
+											<li><a href="#">The drop-down menu</a></li>
+											<li><a href="#">With another level</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="./room.html">Twin room</a></li>
+							<li><a href="./room.html">Family room</a></li>
+							<li><a href="./room.html">Deluxe room</a></li>
+							<li><a href="./room.html">Lough view suite</a></li>
+							<li><a href="./room.html">VIP suite</a></li>
+							<li><a href="./room.html">Palace suite</a></li>
+						</ul>
+					</li>
+					<li><a href="./reservation.html">Reservation</a></li>
+					<li><a class="nav-current" href="./pages.html">Template pages&nbsp;&nbsp;<span class="nav-arrow-down">&#9660;</span></a>
+						<ul>
+							<li class="nav-rounded-right-top"><a href="./index.html">Home page</a></li>
+							<li><a href="./home-classic.html">Classic home</a></li>
+							<li><a href="./home-static.html">Static home</a></li>
+							<li><a href="./rooms.html">Rooms overview</a></li>
+							<li><a href="./room.html">Room description</a></li>
+							<li><a href="./reservation.html">Reservation</a></li>
+							<li><a href="./news.html">News</a></li>
+							<li><a href="./columns.html">Full-width with columns</a></li>
+							<li><a href="./gallery.html">Gallery</a></li>
+							<li><a href="./elements.html">Elements</a></li>
+							<li><a href="./location.html">Location</a></li>
+							<li><a href="./contact.html">Contact</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+			</div>
+			<!-- end main navigation -->
+			
+		</div>
+		<!-- end header -->
+		
+		<!-- begin top-area -->
+		<div id="top-area">
+			
+			<!-- begin form-login -->
+			<form id="form-login" action="">
+				<p id="top-area-text">
+					Sign in:
+				</p>
+				<p>
+					<input id="top-area-login" type="text" value="Type in your login" />
+					<input id="top-area-password" type="password" value="XXXXXX" />
+					<a id="top-area-button-submit" class="button-sign-in" href="#">SIGN IN</a>
+				</p>
+				<div id="top-area-nav">
+					<ul>
+						<li><a class="sign-in" href="#">Sign in</a></li>
+						<li><a href="#">Register</a></li>
+					</ul>
+					<div id="top-area-nav-left"></div>
+					<div id="top-area-nav-right"></div>
+				</div>
+			</form>
+			<!-- end form-login -->
+			
+			<div id="top-area-bottom"></div>
+			
+		</div>
+		<!-- end top-area -->
+			
+	</div>
+	<!-- end full-width-header -->
+	
+	<!-- begin full-width-slider-small -->
+	<div id="full-width-slider-small">	
+		
+		<!-- begin 1st slide -->
+		<div class="slide">
+			<div class="slide-image">
+				<img src="./img-demo/pens.jpg" alt="" />
+			</div>
+			<div class="slide-caption-container">
+				<div class="slide-caption">
+					<p class="caption-heading">The Palace: a versatile theme</p>
+					<p>It comes with 12 XHTML pages.</p>
+				</div>
+			</div>
+		</div>
+		<!-- end 1st slide -->
+			
+	</div>
+	<!-- end full-width-slider-small -->		
+		
+	<!-- begin main-content	-->
+	<div id="main-content">
+		
+		<div id="main-container-top"></div>
+		
+		<!-- main container -->
+		<div id="main-container">
+			
+			<div id="main-container-top-gradient"></div>
+			
+			<!-- begin 1st row -->
+			<div class="row">
+				
+				<div class="column-half-width">
+				
+					<h2 class="first-headings">What's in the Palace?</h2>
+					<p>
+						The Palace theme is best suited to build hotel websites but it's so versatile that you can use it for everything you want (corporate website, portfolio...)
+					</p>
+					<ul class="bullets-stars">
+						<li>Unique and creative design</li>
+						<li>2 homepage versions (hotel &amp; business)</li>
+						<li>12 XHTML pages</li>
+						<li>Full width slider</li>
+						<li>Working Ajax reservation form with live validation</li>
+						<li>Working Ajax contact form with live validation</li>
+						<li>Unlimited background color</li>
+						<li>7 color variations</li>
+						<li>Super-fish drop-down menu</li>
+						<li>Clean and well-commented code</li>
+						<li>PSD files included</li>
+						<li>Valid XHTML 1.0 Strict & CSS</li>
+					</ul>
+
+					<h2 class="more-padding">12 XHTML pages</h2>
+					
+					<ol>
+						<li><a href="./index.html">Homepage</a> (with a full-width slider, a package slider, a testimonial slider, a side reservation form...)</li>
+						<li><a href="./home-classic.html">Classic homepage</a> (homepage without hotel-related stuff)</li>
+						<li><a href="./home-static.html">Static homepage</a> (homepage with a big image - no slider)</li>
+						<li><a href="./elements.html">Elements</a> (page with a lot of elements: buttons, lists, headings, form elements, table)</li>
+						<li><a href="./rooms.html">Rooms</a> (a page with a list of rooms)</li>
+						<li><a href="./room.html">Room</a> (a page to showcase a room)</li>
+						<li><a href="./reservation.html">Reservation</a> (reservation page with calendars, live validation, ajax...)</a></li>
+						<li><a href="./news.html">News</a> (right sidebar - there is a slider on this page - it's just an example you can remove it or put a slider on other pages)</li>
+						<li><a href="./gallery.html">Gallery</a> (a page with prettyPhoto integrated)
+						<li><a href="./location.html">Location</a> (with a big google map)</li>
+						<li><a href="./contact.html">Contact</a> (live validation and ajax)</li>
+						<li><a href="./columns.html">Full width page</a> (with columns... a lot of columns...)</li>
+					</ol>
+				
+				</div>
+				
+				<div class="column-half-width column-last">
+					<p>	
+						&nbsp;
+					</p>
+					<p>	
+						&nbsp;
+					</p>
+					<p>
+						<img src="./img-demo/home2.png" alt="" />
+					</p>
+				</div>
+				
+				<div class="clear"></div>
+				
+				<p>&nbsp;</p>
+					
+				<a class="button-grey aligncenter" href="http://themeforest.net/user/AurelienD/portfolio/?ref=AurelienD">BUY THE PALACE!</a>
+					
+			</div>
+			<!-- end 1st row -->
+
+		</div>
+		<!-- end main container -->
+		
+		<div id="main-container-bottom"></div>
+	
+	</div>
+	<!-- end main content -->
+	
+	<!-- begin full-width-footer -->
+	<div id="full-width-footer">
+	
+		<div id="footer-image"></div>
+		
+		<div id="footer-mask"></div>
+		
+		<!-- begin footer-content-container -->
+		<div id="footer-content-container">
+			
+			<!-- begin footer-content -->
+			<div id="footer-content">
+			
+				<!-- begin 1st column -->
+				<div class="column-fifth-width">
+					<h3>Navigation</h3>
+					<ul>
+						<li><a href="./index.html">Home page</a></li>
+						<li><a href="./home-classic.html">Classic home</a></li>
+						<li><a href="./home-static.html">Static home</a></li>
+						<li><a href="./rooms.html">Rooms overview</a></li>
+						<li><a href="./room.html">Room description</a></li>
+						<li><a href="./reservation.html">Reservation</a></li>
+						<li><a href="./news.html">News (with right sidebar)</a></li>
+						<li><a href="./columns.html">Full-width with columns</a></li>
+						<li><a href="./gallery.html">Gallery</a></li>
+						<li><a href="./elements.html">Elements</a></li>
+						<li><a href="./location.html">Location</a></li>
+						<li><a href="./contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<!-- end 1st column -->
+				
+				<!-- begin 2nd column -->
+				<div class="column-fifth-width">
+					<h3>Rooms &amp; Suites</h3>
+					<ul>
+						<li><a href="./room.html">Single room</a></li>
+						<li><a href="./room.html">Double room</a></li>
+						<li><a href="./room.html">Twin room</a></li>
+						<li><a href="./room.html">Family room</a></li>
+						<li><a href="./room.html">Deluxe room</a></li>
+						<li><a href="./room.html">Lough view suite</a></li>
+						<li><a href="./room.html">VIP suite</a></li>
+						<li><a href="./room.html">Palace suite</a></li>
+						<li><a href="./room.html">Deluxe room</a></li>
+						<li><a href="./room.html">Lough view suite</a></li>
+						<li><a href="./room.html">VIP suite</a></li>
+						<li><a href="./room.html">Palace suite</a></li>
+					</ul>
+				</div>
+				<!-- end 2nd column -->
+				
+				<!-- begin 3rd column -->
+				<div class="column-fifth-width">
+					<h3>About The Palace</h3>
+					<ul>
+						<li><a href="./pages.html">Overview</a></li>
+						<li><a href="./pages.html">Lorem ipsum</a></li>
+						<li><a href="./pages.html">Team</a></li>
+					</ul>	
+					<h3>The Spa</h3>
+					<ul>
+						<li><a href="./pages.html">Massages</a></li>
+						<li><a href="./pages.html">Swiming pool</a></li>
+						<li><a href="./pages.html">Massages</a></li>
+						<li><a href="./pages.html">Swiming pool</a></li>
+						<li><a href="./pages.html">Massages</a></li>
+						<li><a href="./pages.html">Swiming pool</a></li>
+					</ul>
+				</div>
+				<!-- end 3rd column -->
+				
+				<!-- begin 4th column -->
+				<div class="column-fifth-width">
+					<h3>Packages</h3>
+					<ul>
+						<li><a href="./news.html">Massage &amp; Spa week</a></li>
+						<li><a href="./news.html">Bed &amp; Breakfast</a></li>
+						<li><a href="./news.html">Friday to Monday</a></li>
+					</ul>	
+					<h3>Get great deals</h3>
+					<ul>
+						<li><a href="#">The Palace on Twitter</a></li>
+						<li><a href="#">The Palace on Facebook</a></li>
+						<li><a href="#">The Palace on Lorem</a></li>
+						<li><a href="#">The Palace on Ipsum</a></li>
+						<li><a href="#">The Palace on Amor</a></li>
+					</ul>
+				</div>
+				<!-- end 4th column -->
+				
+				<!-- begin 5th column -->
+				<div class="column-fifth-width column-last">
+					<h3>Footer easy to use</h3>
+					<p>
+						Put a wide photo and 
+						the CSS rules included in 
+						this HTML theme
+						will tone it down and add a gradient 
+						to smoothly join
+						the main background (you may need to
+						change the color of the footer text 
+						if you go
+						with a dark background).
+					</p>
+				</div>
+				<!-- end 5th column -->
+
+				<div class="clear"></div>
+				
+				<!-- begin footer-copyright -->
+				<div id="footer-copyright">
+				&copy; Copyright 2011 The Palace  -  Designed by <a href="http://themeforest.net/user/AurelienD/?ref=AurelienD">AurelienD</a> for <a href="http://themeforest.net/?ref=AurelienD">ThemeForest</a>
+				</div>
+				<!-- end footer-copyright -->
+			</div>
+			<!-- end footer-content -->
+			
+		</div>
+		<!-- end footer-content-container -->
+	
+	</div>
+	<!--end full-width-footer -->
+	
+	
+	<!-- begin demo-color -->
+	<div id="demo-color">
+		<b>Background color:</b><br/><br/>
+		<div id="colorSelector"><div style="background-color: #f0f3ff"></div></div>
+		Note that you can easily change the color of all buttons.
+		7 colors are predefined. Have a look at <a href="./elements.html">the elements page.</a>
+		<a href="#" id="button-settings"></a>
+	</div>
+	<!-- end demo-color -->
+	
+	<!-- begin demo-buy -->
+	<div id="demo-buy">
+		<a class="button-buy-it" href="http://themeforest.net/item/the-palace-hotel-and-business-html-theme/694689?ref=AurelienD">BUY THIS THEME!</a>
+		<a href="#" id="button-buy"></a>
+	</div>
+	<!-- end demo-buy -->
+	
+</body>
+</html>
